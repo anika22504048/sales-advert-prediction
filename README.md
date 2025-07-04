@@ -20,10 +20,6 @@ This project applies linear regression techniques in R to predict sales based on
 - R (base, `lmtest`, `car`)
 - Visualization using base R plotting
 📂 Files[Sales and Advertisement Data.xlsx](https://github.com/user-attachments/files/21068468/Sales.and.Advertisement.Data.xlsx)
-- `Sales_and_Advertisement_Data.xlsx`: Dataset (included if permitted)
-- `README.md`: Project overview
-🔗 Notes
-If sharing this dataset is not allowed, please refer to your own or simulated data. This project can be adapted easily with new inputs.
 🚀 How to run
 1. Open `analysis.R` in RStudio  
 2. Run the full script to generate models, plots, and diagnostics  
