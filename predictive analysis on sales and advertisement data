@@ -1,0 +1,75 @@
+#extracting the data
+df<-Sales_and_Advertisement_Data
+View(df)
+str(df)
+# linear regression model 
+model<-lm(sales~price,data = df)
+summary
+#visualization including scatter plot and regresson line 
+plot(df$price,df$sales,main = "scatter plot",xlab = "price",ylab = "sales",col="red",pch=20)
+abline(model,lwd=5)
+#calculate 95% confidence intervals for model parameters
+confint<-confint(model,level = 0.95)
+predict(model,newdata = df,interval = "confidence",level = 0.95)
+#predict sales for new price values with 95% confidence interval
+newdata<-data.frame(price=c(5,6,7))
+predict(model,newdata = newdata,interval = "confidence",level = 0.95)
+#multiple regression model
+model1<-lm(df$sales~df$price+df$advert,data = df)
+summary(model1)
+pred<-fitted(model1)
+pred
+resi<-residuals(model1)
+resi
+plot(model1,which = 1)
+install.packages("lmtest")
+library(lmtest)
+bptest(model1)
+install.packages("car")
+viff_values<-vif(model1)
+vif(model)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
